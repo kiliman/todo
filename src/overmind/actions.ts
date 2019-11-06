@@ -6,4 +6,7 @@ export const addTodo: Action<string, string> = ({ state }, title) => {
   state.todos[id] = { id, title, completed: false }
   return id
 }
+
+export const toggleTodo: Action<string> = ({ state }, todoId) => {
+  state.todos[todoId].completed = !state.todos[todoId].completed
 }
